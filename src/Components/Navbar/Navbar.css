@@ -37,5 +37,111 @@ font-family: 'Roboto Condensed', sans-serif; */
     color: white;
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 
 }
+.select{
+    font-size: 20px;
+    width: 200px; 
+  padding: 10px; 
+text-align: center;
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  background-color: #fff;
+  color: #333; 
+}
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgba(0, 128, 0, 0.5);
+  }
+  .select:hover {
+    border-color: #666; 
+  }
+  .select:focus {
+    outline: none; 
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+  }
+  
+  /* Style the dropdown options */
+  .select option {
+    background-color: rgba(0, 128, 0, 0.5);
+    color: #333;
+   
+    font-size: 20px;
+  }
+
+  .search{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
+  .one{
+    padding: 0px 50px;
+    flex: 1;
+  }
+  .one h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+  }
+  .one h1::before{
+    content: "L";
+    color: rgb(25, 75, 25);
+    font-family: 'Montserrat', sans-serif;
+
+   
+  }
+  .two{
+    /* background-color: red; */
+    flex: 2;
+    text-align: center;
+  }
+.two input{
+  width: 700px;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid rgb(25, 75, 25);;
+  border-radius: 5px;
+  text-align: Center;
+  font-size: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-right: 5px;
+}
+.sicon{
+font-size: 30px;
+
+}
+.two input:focus{
+  outline: none; 
+}
+
+  .three{
+    text-align: center;
+    flex: 1;
+
+  }
+  .three button{
+    padding: 5px 10px;
+    font-size: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 5px;
+    border: none;
+    margin: 0px 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+  }
+
+  .btn{
+    font-size: 30px;
+  color: rgb(25, 75, 25);
+    
+  }

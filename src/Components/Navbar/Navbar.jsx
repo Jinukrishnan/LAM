@@ -2,6 +2,9 @@ import React from 'react'
 import './Navbar.css'
 import { IoMailSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
+import { IoSearch } from "react-icons/io5";
+import { FaHeart } from "react-icons/fa";
+import { FaCartArrowDown } from "react-icons/fa";
 const Navbar = () => {
   return (
     <div>
@@ -11,7 +14,7 @@ const Navbar = () => {
         </div>
       <div className='nav'>
             <div className="left">
-                   <div className="home">
+                   <div className="homenav">
                     <a href="">Home</a>
                    </div>
                    <div className="category">
@@ -25,11 +28,23 @@ const Navbar = () => {
                    </div>
             </div>
             <div className="right">
-                <select name="" id="">
+                <select name="" id="" className='select'>
                     <option value="">Sign in</option>
                     <option value="">Sign up</option>
                 </select>
             </div>
+      </div>
+      <div className="search">
+        <div className="one">
+          <h1>AM</h1>
+        </div>
+        <div className="two">
+            <input type="text"  placeholder="Search"/><IoSearch className='sicon'/>
+        </div>
+        <div className="three">
+              <button><FaHeart className='btn' /> 0</button>
+              <button><FaCartArrowDown className='btn' /> 0</button>
+        </div>
       </div>
     </div>
   )
