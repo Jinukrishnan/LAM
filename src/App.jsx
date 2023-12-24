@@ -1,18 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Navbar from './Components/Navbar/Navbar'
-import Home from './Components/Navbar/Home/Home'
-
+import { lazy, Suspense } from 'react'
 function App() {
-  const [count, setCount] = useState(0)
-
+  const Admin = lazy(() => import('./admin/Admin'))
+  const AdminHome = lazy(() => import('./admin/AdminHome'))
   return (
     <>
-     <Navbar/>
-     <Home/>
-    </>
+      <BrowserRouter>
+        <Suspense>
+          <Routes>
+            <Route path='/admin' element={<Admin />} />
+            <Route path='/adminhome' element={<AdminHome/>} />
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+    </ >
   )
 }
 
